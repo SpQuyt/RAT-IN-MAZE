@@ -5,7 +5,6 @@
 #include <unistd.h>
 #include <windows.h>
 
-
 #define num  7		   //me cung co may hang may cot (trong vi du nay la 1 me cung hinh vuong)
 int count = 0;
 int visited[num][num]; // check xem o nay da di chua
@@ -27,7 +26,7 @@ void display(){
 	for (int i = 0; i < num; i++){
 		printf("   ");
 		for (int j = 0; j < num; j++){
-			printf("%d  ", maze[i][j]);
+			printf("%d ", maze[i][j]);
 		}
 		printf("\n");
 	}
@@ -35,7 +34,7 @@ void display(){
 	for (int i = 0; i < num; i++){
 		printf("   ");
 		for (int j = 0; j < num; j++){
-			printf("%d  ", visited[i][j]);
+			printf("%d ", visited[i][j]);
 		}
 		printf("\n");
 	}
