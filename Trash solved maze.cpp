@@ -9,11 +9,11 @@
 int count = 0;
 int visited[num][num]; // check xem o nay da di chua
 int maze[num][num] = { // me cung de bai cho
-	{1, 1, 0, 1, 1, 0, 1},
-	{0, 1, 0, 0, 1, 1, 1},
+	{1, 1, 0, 1, 1, 1, 1},
+	{0, 1, 0, 0, 0, 1, 1},
 	{1, 1, 1, 1, 0, 1, 0},
 	{0, 1, 0, 1, 1, 1, 1},
-	{0, 1, 0, 0, 1, 0, 1},
+	{0, 1, 0, 0, 0, 0, 1},
 	{0, 1, 1, 0, 1, 0, 0},
 	{0, 0, 0, 0, 1, 1, 1}
 };
@@ -81,6 +81,17 @@ int main(){
 			visited[i][j] = 0;
 		}
 	}
-
+	
+	printf("   1 is cell, 0 is block.\n\n\n");
+	printf("== ME CUNG ==\n\n");
+	for (int i = 0; i < num; i++){
+		printf("   ");
+		for (int j = 0; j < num; j++){
+			printf("%d ", maze[i][j]);
+		}
+		printf("\n");
+	}
+	system("pause");
+	
 	gen_path(0,0); // let's go
 }
