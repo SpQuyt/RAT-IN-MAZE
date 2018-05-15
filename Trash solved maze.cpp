@@ -10,12 +10,12 @@ int count = 0;
 int visited[num][num]; // check xem o nay da di chua
 int maze[num][num] = { // me cung de bai cho
 	{1, 1, 0, 1, 1, 1, 1},
-	{0, 1, 0, 0, 0, 1, 1},
-	{1, 1, 1, 1, 0, 1, 0},
-	{0, 1, 0, 1, 1, 1, 1},
-	{0, 1, 0, 0, 0, 0, 1},
-	{0, 1, 1, 0, 1, 0, 0},
-	{0, 0, 0, 0, 1, 1, 1}
+	{1, 1, 0, 0, 0, 1, 1},
+	{1, 1, 1, 1, 1, 1, 0},
+	{1, 1, 0, 1, 1, 1, 1},
+	{1, 1, 0, 0, 0, 0, 1},
+	{1, 1, 1, 0, 1, 0, 0},
+	{1, 1, 1, 1, 1, 1, 1}
 };
 
 
@@ -38,7 +38,7 @@ void display(){
 		}
 		printf("\n");
 	}
-	sleep(1);
+	_sleep(100);
 }
 
 void gen_path(int row, int col){
@@ -58,10 +58,10 @@ void gen_path(int row, int col){
 			display();
 			return;
 		}
-		else if (maze[row + 1][col] != 1 && maze[row - 1][col] != 1 && maze[row][col + 1] != 1 && maze[row][col - 1] != 1){
-			display();
-			return;
-		}
+//		else if (maze[row + 1][col] != 1 && maze[row - 1][col] != 1 && maze[row][col + 1] != 1 && maze[row][col - 1] != 1){
+//			display();
+//			return;
+//		}
 		else{
 			visited[row][col] = 1;
 			display();
